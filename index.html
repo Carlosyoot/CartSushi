@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+    <h1>SUSHI EXEMPLO</h1>
+    <button onclick="addToCart('Produto 1')">Adicionar Produto 1</button>
+    <button onclick="addToCart('Produto 2')">Adicionar Produto 2</button>
+
+    <div class="cart-container">
+
+        <i class="fas fa-shopping-cart cart-icon" onclick="toggleCart()"></i>
+        <div class="notification-badge" id="cartCount" style="display: none;"></div>
+        
+
+        <div class="cart-content" id="cartContent">
+            <h4>Carrinho de Compras</h4>
+            <div id="cartItems">Nenhuma refeição adicionada</div>
+            <button class="checkout-button" onclick="checkout()">Finalizar Comanda</button>
+        </div>
+
+    </div>
+
+    <div class="modal" id="errorModal">
+        <h4>Erro</h4>
+        <p>O carrinho está vazio. Adicione itens antes de finalizar a compra.</p>
+        <button onclick="closeModal()">Fechar</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
